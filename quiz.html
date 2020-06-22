@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <title>Quiz Time!</title>
 </head>
 <body>
-    
+
+
+
+    <ion-app>
+        <ion-content>
+
+            <ion-grid>
+                <ion-row style="height: 100vh;" class="ion-align-items-center ion-text-center" > <!--class="ion-align-items-center -->
+                    <ion-col>
+                        <div id="text-container">
+                            <h1 id="question-placement">Q1: What is my name?</h1>
+                            <ion-button onclick="check_ans('A')" name="ans_btn" id="first" >Jonny</ion-button>
+                            <ion-button onclick="check_ans('B')" name="ans_btn" id="second">Manny</ion-button>
+                            <ion-button onclick="check_ans('C')" name="ans_btn" id="third" >Homer</ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            
+        </ion-content>
+    </ion-app>
+
+   
+
+    <script src="quiz.js"></script>
 </body>
 </html>
