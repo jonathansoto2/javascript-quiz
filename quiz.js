@@ -4,6 +4,7 @@ const questionArea = document.getElementById('question-placement');
 const firstAnswer = document.getElementById('first');
 const secondAnswer = document.getElementById('second');
 const thirdAnswer = document.getElementById('third');
+const scoreArea = document.getElementById('score');
 
 
 var myQuestions= [
@@ -48,9 +49,25 @@ var myQuestions= [
 function check_ans(val) { 
     console.log(val);
     for (var i = currentQuestion; i < myQuestions.length; i++){
-        
-        if(val == myQuestions[i].correct_answer){
+        if(currentQuestion + 1 == myQuestions.length){
+            if(val == myQuestions[i].correct_answer){
+                score += 1;
+                scoreArea.innerHTML = "";
+                scoreArea.innerHTML = "Score: " + score;
+                console.log("you are correct!", score);
+                questionArea.innerHTML = "End of Quiz!"
+                firstAnswer.remove(); secondAnswer.remove(); thirdAnswer.remove();
+                return
+            }else{
+                questionArea.innerHTML = "End of Quiz!"
+                firstAnswer.remove(); secondAnswer.remove(); thirdAnswer.remove();
+            }
+            return
+        }
+        else if(val == myQuestions[i].correct_answer){
             score += 1;
+            scoreArea.innerHTML = "";
+            scoreArea.innerHTML = "Score: " + score;
             console.log("you are correct!", score);
             
             //document.getElementsByName("ans_btn")[0].color = rbg(0,0,0);
