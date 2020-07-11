@@ -16,13 +16,14 @@
         <ion-content>
 
             <ion-grid>
-                <ion-row style="height: 100vh;" class="ion-align-items-center ion-text-center" > <!--class="ion-align-items-center -->
+                <ion-row style="height: 100vh;" class="ion-align-items-center ion-text-center" > 
                     <ion-col>
                         <div id="text-container">
+                            <h1 id="intro-question">How much do you know about me? Take this short quiz to find out!</h1>
                             <h1 id="question-placement">Q1: What is my name?</h1>
-                            <ion-button onclick="check_ans('A')" name="ans_btn" id="first" >Jonny</ion-button>
-                            <ion-button onclick="check_ans('B')" name="ans_btn" id="second">Manny</ion-button>
-                            <ion-button onclick="check_ans('C')" name="ans_btn" id="third" >Homer</ion-button>
+                            <ion-button onclick="check_ans('A')"  id="first" class="ion-padding">Jonny</ion-button>
+                            <ion-button onclick="check_ans('B')"  id="second" class="ion-padding">Manny</ion-button>
+                            <ion-button onclick="check_ans('C')"  id="third" class="ion-padding" >Homer</ion-button>
                             <h2 id="score">Score: </h2>
                         </div>
                     </ion-col>
