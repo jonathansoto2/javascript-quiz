@@ -1,2 +1,3 @@
-# javascript-quiz
-a short quiz written in JavaScript
+#Survey logic 
+#IONIC UI components
+#
